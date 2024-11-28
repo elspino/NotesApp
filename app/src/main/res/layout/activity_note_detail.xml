@@ -1,41 +1,64 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/noteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Текст заметки"/>
+        android:layout_marginBottom="16dp"
+        android:height="48dp"
+        android:autofillHints="@string/note_text_hint"
+        android:hint="@string/note_text_hint"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:minHeight="48dp"
+        android:padding="16dp"
+        android:textSize="16sp" />
 
+
+    <!-- Кнопка для съемки фото -->
     <Button
         android:id="@+id/takePhotoButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Сделать фото"/>
+        android:text="@string/take_photo"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Изображение -->
     <ImageView
         android:id="@+id/photoView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+        android:contentDescription="@string/note_image"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Кнопка для получения погоды -->
     <Button
         android:id="@+id/getWeatherButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Получить погоду"/>
+        android:text="@string/get_weather"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Текстовое поле для погоды -->
     <TextView
         android:id="@+id/weatherText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Погода"/>
+        android:text="@string/weather"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Кнопка для сохранения заметки -->
     <Button
         android:id="@+id/saveNoteButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Сохранить"/>
+        android:padding="16dp"
+        android:text="@string/save_note"/>
 </LinearLayout>

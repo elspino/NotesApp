@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">NotesApp</string>
+    <string name="add_note">Добавить заметку</string>
+    <string name="get_weather">Получить погоду</string>
+    <string name="save_note">Сохранить</string>
+    <string name="take_photo">Сделать фото</string>
+    <string name="weather">Погода</string>
+    <string name="note_text_hint">Текст заметки</string>
+    <string name="note_image">Изображение заметки</string>
+    <string name="notes_not_found">Нет заметок</string>
 </resources>
