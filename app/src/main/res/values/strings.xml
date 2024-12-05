@@ -4,8 +4,14 @@
     <string name="get_weather">Получить погоду</string>
     <string name="save_note">Сохранить</string>
     <string name="take_photo">Сделать фото</string>
-    <string name="weather">Погода</string>
+    <string name="weather">Погода:</string>
     <string name="note_text_hint">Текст заметки</string>
     <string name="note_image">Изображение заметки</string>
     <string name="notes_not_found">Нет заметок</string>
+    <string name="create_note">Создать новую заметку</string>
+    <string name="get_all_notes">Посмотреть все заметки</string>
+    <string name="delete_note">Удалить</string>
+    <string name="notes">Заметки</string>
+    <string name="back">Назад</string>
+    <string name="create_notes">Создание заметки</string>
 </resources>

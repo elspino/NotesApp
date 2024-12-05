@@ -13,4 +13,7 @@ public interface NoteDao {
 
     @Query("SELECT * FROM notes")
     List<Note> getAllNotes();
+
+    @Query("DELETE FROM notes WHERE id = :noteId")
+    void deleteById(int noteId);
 }
