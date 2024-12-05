@@ -2,63 +2,106 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:gravity="center"
+    android:padding="8dp"
+    android:background="@color/background_light">
 
-    <EditText
-        android:id="@+id/noteText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:height="48dp"
-        android:autofillHints="@string/note_text_hint"
-        android:hint="@string/note_text_hint"
-        android:inputType="textMultiLine"
-        android:maxLines="5"
-        android:minHeight="48dp"
-        android:padding="16dp"
-        android:textSize="16sp" />
+        android:orientation="horizontal"
+        android:padding="4dp">
 
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/arrow_back"
+            android:contentDescription="@string/back"
+            android:background="?android:attr/selectableItemBackground" />
 
-    <!-- Кнопка для съемки фото -->
-    <Button
-        android:id="@+id/takePhotoButton"
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="@string/create_notes"
+            android:textSize="16sp"
+            android:textColor="@color/title_text_color"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/take_photo"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <!-- Изображение -->
-    <ImageView
-        android:id="@+id/photoView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:contentDescription="@string/note_image"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="16dp"/>
+        <EditText
+            android:id="@+id/noteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:minHeight="250dp"
+            android:autofillHints="@string/note_text_hint"
+            android:hint="@string/note_text_hint"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_color"
+            android:background="@drawable/edittext_background" /> <!-- Фоновый рисунок или цвет -->
 
-    <!-- Кнопка для получения погоды -->
-    <Button
-        android:id="@+id/getWeatherButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/get_weather"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
-    <!-- Текстовое поле для погоды -->
-    <TextView
-        android:id="@+id/weatherText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/weather"
-        android:layout_marginBottom="16dp"/>
+            <ImageButton
+                android:id="@+id/getWeatherButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/refresh"
+                android:contentDescription="@string/get_weather"
+                android:background="@color/background_light"
+                android:layout_marginEnd="8dp"/>
 
-    <!-- Кнопка для сохранения заметки -->
+            <TextView
+                android:id="@+id/weatherText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/weather"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/takePhotoButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/take_photo"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/photoView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/note_image"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
     <Button
         android:id="@+id/saveNoteButton"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="@string/save_note"/>
+        android:text="@string/save_note" />
 </LinearLayout>
