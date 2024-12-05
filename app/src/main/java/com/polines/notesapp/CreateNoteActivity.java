@@ -26,7 +26,7 @@ import com.polines.notesapp.service.WeatherService;
 
 import java.io.File;
 
-public class NoteDetailActivity extends AppCompatActivity {
+public class CreateNoteActivity extends AppCompatActivity {
     private EditText noteText;
     private ImageView photoView;
     private TextView weatherText;
@@ -36,7 +36,7 @@ public class NoteDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_note_detail);
+        setContentView(R.layout.activity_create_note);
 
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> finish());
@@ -57,7 +57,7 @@ public class NoteDetailActivity extends AppCompatActivity {
                     if (isGranted) {
                         openCamera();
                     } else {
-                        Toast.makeText(NoteDetailActivity.this, "Permission to use the camera has not been received", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CreateNoteActivity.this, "Permission to use the camera has not been received", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -90,7 +90,7 @@ public class NoteDetailActivity extends AppCompatActivity {
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
 
         if (storageDir != null && !storageDir.exists() && !storageDir.mkdirs()) {
-            Log.e("NoteDetailActivity", "Failed to create directory: " + storageDir.getAbsolutePath());
+            Log.e("CreateNoteActivity", "Failed to create directory: " + storageDir.getAbsolutePath());
             return null;
         }
 

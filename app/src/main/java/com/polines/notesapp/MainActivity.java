@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.addNoteButton).setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, NoteDetailActivity.class);
+            Intent intent = new Intent(MainActivity.this, CreateNoteActivity.class);
             startActivity(intent);
         });
 
