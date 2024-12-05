@@ -1,5 +1,6 @@
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunitolight</item>
         <item name="android:windowBackground">@color/background_light</item>
         <item name="android:buttonStyle">@style/ButtonStyle</item>
         <item name="android:textColor">@color/text_color</item>

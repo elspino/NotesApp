@@ -8,16 +8,27 @@
     android:background="@color/background_light">
 
 
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/title"
+        android:layout_marginBottom="24dp"
+        android:padding="8dp"
+        android:scaleType="centerCrop" />
+
     <Button
         android:id="@+id/addNoteButton"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/create_note"
+        android:textSize="17sp"
         android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/viewNotesButton"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:textSize="17sp"
         android:text="@string/get_all_notes"/>
 </LinearLayout>

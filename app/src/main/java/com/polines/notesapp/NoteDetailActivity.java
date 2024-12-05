@@ -72,8 +72,7 @@ public class NoteDetailActivity extends AppCompatActivity {
         photoView = findViewById(R.id.photoView);
         weatherText = findViewById(R.id.weatherText);
 
-        findViewById(R.id.getWeatherButton).setOnClickListener(v -> getWeather());
-
+        getWeather();
         findViewById(R.id.saveNoteButton).setOnClickListener(v -> saveNote());
     }
 

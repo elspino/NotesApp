@@ -3,14 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:padding="8dp"
+    android:padding="16dp"
     android:background="@color/background_light">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="4dp">
+        android:padding="6dp"
+        android:gravity="center_vertical">
 
         <ImageButton
             android:id="@+id/backButton"
@@ -22,15 +23,26 @@
 
         <TextView
             android:id="@+id/toolbarTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
             android:text="@string/create_notes"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textColor="@color/title_text_color"
-            android:layout_marginStart="16dp" />
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nunitoregular" />
+
+        <ImageButton
+            android:id="@+id/takePhotoButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/camera"
+            android:contentDescription="@string/take_photo"
+            android:background="?android:attr/selectableItemBackground" />
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:minHeight="250dp"
+            android:minHeight="96dp"
             android:autofillHints="@string/note_text_hint"
             android:hint="@string/note_text_hint"
             android:inputType="textMultiLine"
@@ -54,40 +66,44 @@
             android:textColor="@color/text_color"
             android:background="@drawable/edittext_background" /> <!-- Фоновый рисунок или цвет -->
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/weatherText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/weather"
+            android:textColor="@color/text_color"
+            android:padding="2dp"
+            android:textSize="16sp" />
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_marginBottom="16dp">-->
 
-            <ImageButton
-                android:id="@+id/getWeatherButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/refresh"
-                android:contentDescription="@string/get_weather"
-                android:background="@color/background_light"
-                android:layout_marginEnd="8dp"/>
+<!--            <ImageButton-->
+<!--                android:id="@+id/getWeatherButton"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:src="@drawable/refresh"-->
+<!--                android:contentDescription="@string/get_weather"-->
+<!--                android:background="@color/background_light"-->
+<!--                android:layout_marginEnd="8dp"/>-->
 
-            <TextView
-                android:id="@+id/weatherText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/weather"
-                android:textColor="@color/text_color"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/takePhotoButton"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="@string/take_photo"
-            android:layout_marginBottom="16dp"/>
+<!--            <TextView-->
+<!--                android:id="@+id/weatherText"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:text="@string/weather"-->
+<!--                android:textColor="@color/text_color"-->
+<!--                android:textSize="18sp" />-->
+<!--        </LinearLayout>-->
 
         <ImageView
             android:id="@+id/photoView"
@@ -96,6 +112,7 @@
             android:contentDescription="@string/note_image"
             android:scaleType="centerCrop"
             android:layout_marginBottom="16dp"/>
+
     </LinearLayout>
 
     <Button
@@ -103,5 +120,8 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="@string/save_note" />
+        android:textSize="17sp"
+        android:text="@string/save_note"
+        android:fontFamily="@font/nunitoregular"/>
+
 </LinearLayout>

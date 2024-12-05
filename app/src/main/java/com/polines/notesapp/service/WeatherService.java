@@ -26,12 +26,21 @@ public class WeatherService {
 
             try {
                 JSONObject jsonObject = new JSONObject(response);
-                if (jsonObject.has("weather" ) && jsonObject.getJSONArray("weather").length() > 0) {
-                    String weather = jsonObject.getJSONArray("weather").getJSONObject(0).getString("description");
-                    callback.onWeatherReceived("Погода: " + weather);
+
+                String weather;
+                if (jsonObject.has("weather") && jsonObject.getJSONArray("weather").length() > 0) {
+                    weather = jsonObject.getJSONArray("weather").getJSONObject(0).getString("description");
                 } else {
-                    callback.onWeatherReceived("Weather information is missing");
+                    weather = "Weather information is missing";
                 }
+
+                String temperature = "";
+                if (jsonObject.has("main")) {
+                    temperature = jsonObject.getJSONObject("main").getString("temp");
+                }
+
+                callback.onWeatherReceived("Погода: " + weather + ", " + temperature + "°C");
+
             } catch (JSONException e) {
                 Log.e(TAG, "JSON parsing error: ", e);
                 callback.onWeatherReceived("Error fetching weather");
